@@ -46,10 +46,10 @@ const TestPage = () => {
   return (
     <div className=" flex  my-10 justify-center w-screen h-screen  ">
       <div className=" container border h-max  rounded-lg">
-        <div className=" h-5/6 overflow-scroll">
           <p className=" font-medium">
             Question {userState.currentIndex + 1}/{userState.totalQuestions})
           </p>
+        <div className=" h-max overflow-scroll">
 
           <br />
           <MathJaxContext config={mathJaxConfig} >
