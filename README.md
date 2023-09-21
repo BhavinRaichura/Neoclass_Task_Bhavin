@@ -1,71 +1,42 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # Neoclass_Task_Bhavin
+
+## Features
+1. **Home Page:**
+
+    - Feature: Landing Page with User Input Form
+    - Purpose: The home page serves as the initial point of entry for users. It presents a user input form where users can submit their input or data, likely related to starting a test.
+
+2. **Process Page:**
+
+    - Feature: Fetching Questions from API and Updating Redux Store
+    - Purpose: The process page is activated when a user clicks "Start Test." Its main purpose is to fetch questions from an external API if they don't already exist in the Redux store. It then updates the application's state to indicate that a test has started.
+
+3. **Test Page:**
+
+    - Feature: Rendering Test Questions with Navigation (Next and Previous Buttons)
+    - Purpose: The test page is where the actual test questions are displayed. Users can navigate through the questions using Next and Previous buttons. This feature allows users to answer each question sequentially.
+
+4. **End Page:**
+
+    - Feature: Displaying Test Results
+    - Purpose: The end page is designed to show users the results of the test they have taken. This includes information such as question IDs and the time taken on each question. It provides users with a summary of their performance.
+
+5. **Test Ending Options:**
+
+    - Feature: Multiple Ways to End the Test
+    - Purpose: Users have several options to end the test:
+        Clicking the "End" button in the navigation bar (associated with the testEndHandler Higher Order Component).
+        Returning to the home page or refreshing the page.
+        Automatically ending when the timer in the navigation bar reaches 00:00. The timer's duration is set to 5 minutes multiplied by the number of questions. These options give users flexibility in how they conclude the test.
+
+
+## Dependencies
+
+The project relies on the following dependencies:
+
+* React
+* Redux
+* React Router
+* Axios for fetching data from the API
+* better-react-mathjax for rendering math equations.
+* Tailwind CSS for styling.
