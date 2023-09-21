@@ -1,10 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { MathJax } from "better-react-mathjax";
+import { MathJax, MathJaxContext } from "better-react-mathjax";
 import { Navigate } from "react-router-dom";
 
 import { questionStartTimer } from "../redux/actions/userActions";
 import PrevNextButton from "../utils/PrevNextButton";
+
+
+const mathJaxConfig = {
+  tex: {
+    inlineMath: [
+      ["$", "$"],
+      ["$ ", " $"],
+    ],
+    displayMath: [
+      ["$$", "$$"],
+      ["\\", "\\"],
+    ],
+  },
+  options: {
+    skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+  },
+};
 
 const TestPage = () => {
   const userState = useSelector((state) => state.userReducer);
@@ -35,6 +52,8 @@ const TestPage = () => {
           </p>
 
           <br />
+          <MathJaxContext config={mathJaxConfig} >
+
           {restructureQuestion.map((data, key) => {
             if (key % 2 === 0) return <span key={key}>{data}</span>;
             return (
@@ -44,6 +63,7 @@ const TestPage = () => {
               >{`$$${data}$$`}</MathJax>
             );
           })}
+          </MathJaxContext >
         </div>
         <div className="relative bottom-0">
           <PrevNextButton />
