@@ -6,7 +6,6 @@ import { Navigate } from "react-router-dom";
 import { questionStartTimer } from "../redux/actions/userActions";
 import PrevNextButton from "../utils/PrevNextButton";
 
-
 const mathJaxConfig = {
   tex: {
     inlineMath: [
@@ -46,24 +45,23 @@ const TestPage = () => {
   return (
     <div className=" flex  my-10 justify-center w-screen h-screen  ">
       <div className=" container border h-max  rounded-lg">
-          <p className=" font-medium">
-            Question {userState.currentIndex + 1}/{userState.totalQuestions})
-          </p>
+        <p className=" font-medium">
+          Question {userState.currentIndex + 1}/{userState.totalQuestions}
+          {")"}
+        </p>
         <div className=" h-max overflow-scroll">
-
           <br />
-          <MathJaxContext config={mathJaxConfig} >
-
-          {restructureQuestion.map((data, key) => {
-            if (key % 2 === 0) return <span key={key}>{data}</span>;
-            return (
-              <MathJax
-                style={{ display: "inline-block" }}
-                key={key}
-              >{`$$${data}$$`}</MathJax>
-            );
-          })}
-          </MathJaxContext >
+          <MathJaxContext config={mathJaxConfig}>
+            {restructureQuestion.map((data, key) => {
+              if (key % 2 === 0) return <span key={key}>{data}</span>;
+              return (
+                <MathJax
+                  style={{ display: "inline-block" }}
+                  key={key}
+                >{`$$${data}$$`}</MathJax>
+              );
+            })}
+          </MathJaxContext>
         </div>
         <div className="relative bottom-0">
           <PrevNextButton />
