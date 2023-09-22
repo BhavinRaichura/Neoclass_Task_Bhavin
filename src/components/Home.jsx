@@ -58,7 +58,7 @@ const Home = () => {
   
 
   return (<>
-    <h1 className="my-10 font-normal text-xl max-md:text-lg text-center">Neoclass Task by <Link className=" text-blue-600" to='https://www.linkedin.com/in/bhavin-raichura-93a657191/'>Bhavin Raichura</Link></h1>
+    <h1 className="my-10 font-normal text-xl max-md:text-lg text-center">Nioclass Task by <Link className=" text-blue-600" to='https://www.linkedin.com/in/bhavin-raichura-93a657191/'>Bhavin Raichura</Link></h1>
     <div className=" text-base font-normal flex justify-center my-10 h-screen">
       <div className="container  h-max ">
         <form className="my-2 p-2" onSubmit={formHandler}>
